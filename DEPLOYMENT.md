@@ -1,10 +1,14 @@
 # Deploy React to Netlify and Django to Render
 
-The project is prepared for a Git-based deployment. It is not published yet.
-The included Render Blueprint creates a paid Starter web service, a paid
-PostgreSQL database, and a 1 GB persistent disk. Review the prices shown in
-Render before creating resources. The disk preserves uploaded photos, reports,
-and preparation evidence across restarts and deployments.
+The project is prepared for a Git-based testing deployment. The included Render
+Blueprint creates a Free web service and Free PostgreSQL database, without a
+persistent disk. The database expires 30 days after creation. Uploaded photos,
+reports, and preparation evidence are temporary and can disappear on restart,
+redeploy, or service spin-down. Use disposable test data only.
+
+Free services sleep after 15 minutes without inbound traffic. The first request
+can take about a minute to wake the service. If Netlify times out, open the
+backend `/health/` URL, wait for it to respond, then retry the frontend.
 
 ## 1. Put the project in a private GitHub repository
 
@@ -49,21 +53,33 @@ deliberately rejects a missing backend URL.
 
 In Render, create a **Blueprint**, connect the same repository, and select the
 root `render.yaml`. Set the prompted `FRONTEND_URL` to the exact Netlify origin,
-including `https://`, without a trailing slash. Review the paid resources and
-create the Blueprint.
+including `https://`, without a trailing slash. Use `cswdo-system` as the
+Blueprint name. Confirm both resource plans show **Free**, then create it.
+If an old setup still shows paid plans, cancel and restart Blueprint creation
+from the latest `main` branch. If Render still requires payment verification,
+do not enter a card for this testing setup; check its account requirements.
 
 The Blueprint installs Python dependencies, collects Django admin static files,
-creates PostgreSQL, generates a secret key, disables debug mode, mounts upload
-storage, runs migrations on startup, and starts Gunicorn.
+creates PostgreSQL, generates a secret key, disables debug mode, runs migrations
+on startup, and starts one Gunicorn worker to reduce memory use.
 
 After deployment, check `https://YOUR_BACKEND.onrender.com/health/`.
 It should return `{"status": "ok"}` after verifying a database connection.
 
-In the Render web service Shell, create your first administrator:
+Free Render services do not provide a web service Shell. Create the first
+administrator from your local PowerShell terminal using the database's
+**External Database URL** from Render's connection panel. Keep this credential
+private. With Python 3.12 or newer and project requirements installed, run:
 
-```sh
+```powershell
+$env:DATABASE_URL = Read-Host 'Paste the Render External Database URL' -MaskInput
+$env:DEBUG = 'True'
 python manage.py createsuperuser
 ```
+
+On Windows PowerShell 5.1, which lacks `-MaskInput`, use
+`$env:DATABASE_URL = [System.Net.NetworkCredential]::new('', (Read-Host 'Paste the Render External Database URL' -AsSecureString)).Password`
+instead. Run these commands after Render finishes its initial migrations.
 
 If your application needs its custom administrator role set explicitly, run:
 
@@ -80,6 +96,8 @@ user.save(update_fields=['role'])
 
 The Django admin is at `https://YOUR_BACKEND.onrender.com/admin/`.
 The frontend `/admin` route is the React administrator dashboard.
+When finished, clear the remote connection from that local terminal with
+`Remove-Item Env:DATABASE_URL` and `Remove-Item Env:DEBUG`.
 
 ## 4. Connect Netlify to Render
 
@@ -104,7 +122,8 @@ authentication cookie. Update `FRONTEND_URL` if you change the Netlify domain.
 - Refresh a nested frontend route; it should still load.
 - Create a record and upload a test photo or PDF.
 - Open the upload and confirm another unauthorized account cannot access it.
-- Restart the Render service and confirm the record and upload remain available.
+- Restart the Render service and confirm database records remain available;
+  expect uploaded files to be lost on this free setup.
 - Verify token refresh and sign out.
 
 Netlify proxy requests have a 26 second timeout. Operations that exceed that
@@ -114,9 +133,10 @@ need a background-job design or a separate download strategy.
 
 The Render database starts empty except for schema migrations. To move your
 current records, make a PostgreSQL backup and restore it to Render using the
-connection information in your Render dashboard. Copy `media/` to
-`/var/data/media/` and `private_media/` to `/var/data/private_media/` through an
-authenticated transfer. Do not put data backups in the Git repository.
+connection information in your Render dashboard. The free database expires
+after 30 days, so export any test records you want to keep before then.
+Uploads are temporary on the free service; persistent file storage needs a
+separate storage provider or a paid disk. Do not put backups in Git.
 
 ## Local development
 
@@ -129,5 +149,6 @@ assigned hostname is added automatically.
 
 References: [Render Django deployment](https://render.com/docs/deploy-django),
 [Render persistent disks](https://render.com/docs/disks),
+[Render free plan limits](https://render.com/docs/free),
 [Netlify React setup](https://docs.netlify.com/build/frameworks/framework-setup-guides/react/),
 [Netlify rewrites and proxies](https://docs.netlify.com/manage/routing/redirects/rewrites-proxies/).
