@@ -1,0 +1,20 @@
+.floating-review-window {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.06);
+  transition: transform 180ms ease, opacity 180ms ease, visibility 180ms;
+}
+
+.floating-review-window.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-review-window {
+    transition: none;
+  }
+}

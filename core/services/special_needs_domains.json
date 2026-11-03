@@ -1,0 +1,153 @@
+[
+  {
+    "key": "gross_motor",
+    "title": "Gross Motor Domain",
+    "items": [
+      "Climbs on chair or other elevated piece of furniture like a bed without help",
+      "Walks backwards",
+      "Runs without tripping or falling",
+      "Walks down stairs, two feet on each step, with one hand held",
+      "Walks upstairs holding onto a handrail, two feet on each step",
+      "Walks upstairs with alternate feet without holding onto a handrail",
+      "Walks downstairs with alternate feet without holding onto a handrail",
+      "Moves body part as directed",
+      "Jumps up",
+      "Throws ball overhead with direction",
+      "Hops one to three steps on preferred foot",
+      "Jumps and turns",
+      "Dances patterns/joins group movement activities"
+    ]
+  },
+  {
+    "key": "fine_motor",
+    "title": "Fine Motor Domain",
+    "items": [
+      "Uses all five fingers to get food/toys placed on a flat surface",
+      "Picks up objects with thumb and index finger",
+      "Displays a definite hand preference",
+      "Puts small objects in/out of containers",
+      "Holds crayon with all the fingers of his hand making a fist (palmar grasp)",
+      "Unscrews the lid of a container or unwraps food",
+      "Scribbles spontaneously",
+      "Scribbles vertical and horizontal lines",
+      "Draws circle purposefully",
+      "Draws a human figure (head, eyes, trunk, arms, hands/fingers)",
+      "Draws a house using geometric forms"
+    ]
+  },
+  {
+    "key": "self_help",
+    "title": "Self-Help Domain",
+    "items": [
+      "Feeds self with finger food using fingers",
+      "Feeds self using fingers to eat rice/viands with spillage",
+      "Feeds self using spoon with spillage",
+      "Feeds self using fingers without spillage",
+      "Feeds self using spoon without spillage",
+      "Eats without need for spoonfeeding during any meal",
+      "Helps hold cup for drinking",
+      "Drinks from cup with spillage",
+      "Drinks from cup unassisted",
+      "Gets drink for self unassisted",
+      "Pours from pitcher without spillage",
+      "Prepares own food/snack",
+      "Prepares meals for younger siblings/family members when no adult is around",
+      "Participates when being dressed",
+      "Pulls down gartered short pants",
+      "Removes sando",
+      "Dresses without assistance except for buttons and tying",
+      "Dresses without assistance including buttons and tying",
+      "Informs adult after urinating or moving bowels in underpants",
+      "Informs adult of need to urinate or move bowels",
+      "Goes to designated place to urinate or move bowels but sometimes still has accidents",
+      "Goes to designated place and never does this in underpants/wear anymore",
+      "Wipes/cleans self after a bowel movement",
+      "Participates when bathing",
+      "Washes and dries hands without any help",
+      "Washes face without any help",
+      "Bathes without any help"
+    ]
+  },
+  {
+    "key": "receptive_language",
+    "title": "Receptive Language Domain",
+    "items": [
+      "Points to a family member when asked to do so",
+      "Points to five body parts on himself when asked to do so",
+      "Points to five named pictured objects when asked to do so",
+      "Follows one-step instructions that include simple prepositions",
+      "Follows two-step instructions that include simple prepositions"
+    ]
+  },
+  {
+    "key": "expressive_language",
+    "title": "Expressive Language Domain",
+    "items": [
+      "Uses five to 20 recognizable words",
+      "Uses pronouns",
+      "Uses two- to three-word verb-noun combinations",
+      "Names objects in pictures",
+      "Speaks in grammatically correct two- to three-word sentences",
+      "Asks what questions",
+      "Asks who and why questions",
+      "Gives account of recent experiences with prompting in order using past tense"
+    ]
+  },
+  {
+    "key": "cognitive",
+    "title": "Cognitive Domain",
+    "items": [
+      "Looks in the direction of fallen object",
+      "Looks for a partially hidden object",
+      "Imitates behavior just seen a few minutes earlier",
+      "Offers an object but will not release it",
+      "Looks for a completely hidden object",
+      "Exhibits simple pretend play",
+      "Matches objects",
+      "Matches two to three colors",
+      "Matches pictures",
+      "Sorts based on shapes",
+      "Sorts objects based on two attributes",
+      "Arranges objects according to size from smallest to biggest",
+      "Names four to six colors",
+      "Copies shapes",
+      "Names 3 animals or vegetables when asked",
+      "States what common household items are used for",
+      "Can assemble simple puzzles",
+      "Demonstrates understanding of opposites",
+      "Points to left and right sides of body",
+      "Can state what is silly or wrong with pictures",
+      "Matches upper case letters and matches lower case letters"
+    ]
+  },
+  {
+    "key": "social_emotional",
+    "title": "Social-Emotional Domain",
+    "items": [
+      "Enjoys watching activities of nearby people or animals",
+      "Friendly with strangers but initially may show slight anxiety or shyness",
+      "Plays alone but likes to be near familiar adults or siblings",
+      "Laughs or squeals aloud in play",
+      "Plays peek-a-boo",
+      "Rolls ball interactively with caregiver/examiner",
+      "Hugs or cuddles toys",
+      "Demonstrates respect for elders using terms like po and opo",
+      "Shares toys with others",
+      "Imitates adult activities",
+      "Identifies feelings in others",
+      "Appropriately uses cultural gestures of greeting without much prompting",
+      "Comforts playmates/siblings in distress",
+      "Persists when faced with a problem or obstacle",
+      "Helps with family chores",
+      "Curious about environment but knows when to stop asking questions of adults",
+      "Waits for his turn",
+      "Asks permission to play with toy being used by another",
+      "Defends possessions with determination",
+      "Plays organized group games fairly",
+      "Can talk about complex feelings he experiences",
+      "Honors a simple bargain with caregiver",
+      "Watches responsibly over younger siblings/family members",
+      "Cooperates with adults and peers in group situations to minimize quarrels and conflicts"
+    ]
+  }
+]

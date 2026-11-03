@@ -1,0 +1,66 @@
+.official-record { --record-blue: #174d82; color: #1e293b; display: flex; flex-direction: column; gap: 24px; padding-bottom: 24px; }
+.official-record-breadcrumb { display: flex; align-items: center; gap: 12px; color: #64748b; font-size: 12px; }
+.official-record-breadcrumb a { display: inline-flex; align-items: center; gap: 5px; color: var(--record-blue); font-weight: 600; }
+.official-record-hero { padding: 28px 30px 0; border: 1px solid #dce5ef; border-radius: 18px; background: linear-gradient(115deg,#f0f6fc 0%,#fff 65%); box-shadow: 0 4px 20px #20385805; }
+.official-record-identity { display: flex; align-items: center; gap: 20px; }
+.official-record-emblem { display: grid; place-items: center; flex-shrink: 0; width: 72px; height: 72px; border: 1px solid #d9e6f3; border-radius: 18px; background: #fff; color: var(--record-blue); box-shadow: 0 4px 12px #1e456908; }
+.official-record-eyebrow { font-size: 10px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; color: #63788f; }
+.official-record-hero h1 { margin-top: 5px; font-size: clamp(24px,2.5vw,32px); font-weight: 750; letter-spacing: -.035em; line-height: 1.2; overflow-wrap: anywhere; }
+.official-record-address { display: flex; align-items: center; gap: 6px; margin-top: 8px; color: #64748b; font-size: 13px; }
+.official-record-status { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 20px 0 24px; }
+.official-record-badge { display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 7px; font-size: 11px; font-weight: 700; }
+.official-record-badge>span { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.official-record-badge.is-valid { background: #e7f5ee; color: #237553; }
+.official-record-badge.is-pending { background: #fff2d8; color: #865d18; }
+.official-record-grant { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #64748b; }
+.official-record-toolbar { border-top: 1px solid #e3eaf2; padding: 16px 0; }
+.official-record-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.official-record-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid #dce4ed; border-radius: 9px; padding: 10px 14px; background: #fff; color: #475569; font-size: 12px; font-weight: 650; transition: background .15s; }
+.official-record-button:hover { background: #edf4fb; }
+.official-record-button.is-primary { background: var(--record-blue); border-color: var(--record-blue); color: #fff; }
+.official-record-button.is-primary:hover { background: #103d69; }
+.official-record-button:disabled { opacity: .6; cursor: wait; }
+.official-record-download-note { margin-top: 9px; font-size: 11px; color: #64748b; }
+.official-record-metrics { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+.official-record-metric { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 20px; background: #fff; border: 1px solid #e1e7ef; border-radius: 12px; }
+.official-record-metric>svg { color: #7c96af; flex-shrink: 0; }
+.official-record-metric dt { color: #64748b; font-size: 11px; font-weight: 600; }
+.official-record-metric dd { margin-top: 7px; color: #172c43; font-size: 23px; font-weight: 750; letter-spacing: -.03em; overflow-wrap: anywhere; }
+.official-record-metric p { margin-top: 3px; font-size: 10px; color: #64748b; }
+.official-record-section-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 6px; }
+.official-record-section-heading h2 { margin-top: 4px; font-size: 21px; letter-spacing: -.025em; font-weight: 750; }
+.official-record-section-heading p:last-child { margin-top: 5px; font-size: 12px; color: #64748b; }
+.official-record-section-heading>span { white-space: nowrap; border: 1px solid #dfe6ee; border-radius: 7px; padding: 5px 9px; font-size: 11px; color: #64748b; background: #fff; }
+.official-record-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.official-record-card { min-width: 0; display: flex; flex-direction: column; overflow: hidden; border: 1px solid #e0e7ef; border-radius: 14px; background: #fff; box-shadow: 0 2px 6px #172c4303; transition: border-color .15s,box-shadow .15s; }
+.official-record-card:hover { border-color: #b7ccdf; box-shadow: 0 6px 18px #172c4308; }
+.official-record-card-heading { display: flex; gap: 12px; align-items: flex-start; padding: 20px 20px 16px; }
+.official-record-section-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; flex-shrink: 0; }
+.tone-blue { background: #edf4fc; color: #34699b; }.tone-green { background: #ecf7f1; color: #33795d; }.tone-violet { background: #f2effa; color: #7760a3; }.tone-rose { background: #fcf0f1; color: #a76373; }.tone-slate { background: #f0f3f6; color: #62748b; }
+.official-record-card-heading h2 { font-size: 14px; line-height: 1.4; font-weight: 700; letter-spacing: -.01em; }
+.official-record-card-heading p { margin-top: 4px; font-size: 11px; line-height: 1.5; color: #64748b; }
+.official-record-card-content { padding: 0 20px 18px; flex: 1; }
+.official-record-preview>div { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 10px 0; border-top: 1px solid #f0f3f7; }
+.official-record-preview dt { max-width: 55%; font-size: 11px; font-weight: 400; line-height: 1.6; }
+.official-record-preview dd { max-width: 58%; margin-top: 0; font-size: 12px; text-align: right; font-weight: 600; color: #334155; }
+.official-record-card-link { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border-top: 1px solid #eaf0f5; color: var(--record-blue); background: #fafcfe; font-size: 12px; font-weight: 650; }
+.official-record-card-link:hover { background: #edf4fb; }
+.official-record a:focus-visible,.official-record button:focus-visible { outline: 3px solid #6da8dc; outline-offset: 3px; }
+.official-record-detail-layout { display: grid; grid-template-columns: 235px minmax(0,1fr); gap: 24px; align-items: start; }
+.official-record-section-nav { display: flex; flex-direction: column; gap: 4px; position: sticky; top: 90px; }
+.official-record-section-nav a { display: flex; align-items: center; gap: 9px; padding: 10px 12px; border-radius: 8px; color: #64748b; font-size: 12px; line-height: 1.5; }
+.official-record-section-nav .official-record-back { color: var(--record-blue); font-weight: 650; margin-bottom: 12px; padding-left: 0; }
+.official-record-section-nav .official-record-eyebrow { margin: 0 12px 8px; }
+.official-record-section-nav a[aria-current=page] { color: #174d82; background: #e7f0fa; font-weight: 700; }
+.official-record-section-nav a:hover { background: #edf2f7; }
+.official-record-detail { overflow: hidden; border: 1px solid #dfe6ee; border-radius: 14px; background: #fff; }
+.official-record-detail-heading { display: flex; gap: 16px; align-items: center; padding: 26px; background: #fafcfe; border-bottom: 1px solid #e8edf3; }
+.official-record-detail-heading h2 { margin-top: 5px; font-size: 22px; font-weight: 750; letter-spacing: -.025em; }
+.official-record-detail-heading p:last-child { margin-top: 5px; font-size: 12px; color: #64748b; }
+.official-record-detail-body { padding: 26px; }
+.official-record-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 28px; }
+.official-record-fields>div { border-bottom: 1px solid #edf1f5; padding-bottom: 16px; }
+@media(max-width:1200px) { .official-record-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:700px) { .official-record-hero { padding: 20px 18px 0; }.official-record-emblem { width: 52px; height: 52px; border-radius: 12px; }.official-record-identity { gap: 12px; }.official-record-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }.official-record-metric { padding: 14px; }.official-record-metric dd { font-size: 20px; }.official-record-grid,.official-record-detail-layout,.official-record-fields { grid-template-columns: minmax(0,1fr); }.official-record-section-nav { position: static; }.official-record-section-nav a:not(.official-record-back),.official-record-section-nav>p { display: none; }.official-record-detail-heading,.official-record-detail-body { padding: 20px; }.official-record-fields>div { grid-column: auto; } }
+@media print { .official-record { display: block; }.official-record-hero,.official-record-detail { background: #fff; border: 0; }.official-record-detail-layout { display: block; }.official-record-metrics { margin: 20px 0; }.official-record-detail-body { padding: 0; } }
+@media(prefers-reduced-motion:reduce) { .official-record-card,.official-record-button { transition: none; } }

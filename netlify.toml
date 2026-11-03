@@ -1,0 +1,9 @@
+[build]
+  base = "frontend"
+  command = "npm run build && node scripts/netlify-redirects.cjs"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Existing unused-variable lint warnings should not block hosting builds.
+  CI = "false"

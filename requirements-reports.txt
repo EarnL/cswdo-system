@@ -1,0 +1,2 @@
+# Additional dependency for styled Center Report PDF exports.
+reportlab==5.1.0
